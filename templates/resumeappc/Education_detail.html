@@ -1,0 +1,33 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Title: {{ Education.title }}</h1>
+
+  <p><strong>School_attended:</strong> <a href="">{{ Education.School_attended }}</a></p> 
+  <p><strong>Degree:</strong> {{ Education.Degree }}</p>
+  <p><strong>GPA:</strong> {{ Education.GPA }}</p> 
+      {% if Education.School_attended %}  
+      <div class="School_attended-container container-block">
+          <h2 class="container-block-title">School_attended</h2>
+          <ul class="list-unstyled interests-list">
+              <li>{{Education.School_attended}}</li>
+          </ul>
+      </div>
+      {% endif %}  
+      {% if Education.Degree %}  
+            <div class="Degree-container container-block">
+                <h2 class="container-block-title">Degree</h2>
+                <ul class="list-unstyled interests-list">
+                    <li>{{Education.Degree}}</li>
+                </ul>
+            </div>
+            {% endif %}  
+            {% if Education.GPA %}  
+            <div class="GPA-container container-block">
+                <h2 class="container-block-title">GPA</h2>
+                <ul class="list-unstyled interests-list">
+                    <li>{{Education.GPA}}</li>
+                </ul>
+            </div>
+            {% endif %}  
+{% endblock %}

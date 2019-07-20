@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Louis Abe Mujang</h1>
+  <img src="https://www.utsa.edu/oit/_global/images/services/labs.jpg" class="img-fluid" alt="Responsive image">
+  <p>Welcome to my resume, have fun.</p>
+  <h2>Dynamic content</h2>
+  <p>The resume has the following record counts:</p>
+  <ul>
+    <li><strong>Education:</strong> {{ num_Education }}</li>
+    <li><strong>Experience:</strong> {{ num_Experience }}</li>
+    <li><strong>PersonalInfo:</strong> {{ num_PersonalInfo }}</li>
+    <li><strong>JobHistory:</strong> {{ num_JobHistory }}</li>
+    <li><strong>SkillsSummary:</strong> {{ num_SkillsSummary }}</li>
+  </ul>
+{% endblock %}

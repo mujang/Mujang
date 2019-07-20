@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Education List</h1>
+  {% if Education_list %}
+  <ul>
+    {% for Education in Education_list %}
+      <li>
+        <a href="{{ Education.get_absolute_url }}">{{ Education.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no Education in the resume.</p>
+  {% endif %}       
+{% endblock %}
